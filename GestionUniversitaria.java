@@ -12,7 +12,7 @@ public class GestionUniversitaria {
 
     public void validarAlumno(Alumno alumno) {
         int key = alumno.getLegajo();
-        alumnosTotales.put(key,alumno); // HashMap.put(key,object);
+        alumnosTotales.put(key,alumno); // HashMap.put(key,object); 
     }
 
     private Alumno buscarAlumno(Alumno alumno) {
@@ -50,7 +50,6 @@ public class GestionUniversitaria {
 
     public void inscribirMateria(Materia materia, Alumno alumno) {
         strategy.verificarCondicion(materia,alumno);
-
     }
 
 }

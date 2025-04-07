@@ -1,4 +1,4 @@
-public class demo {
+public class CargaEstatica {
     public static void main(String[] args) {
 
         GestionUniversitaria GU = new GestionUniversitaria();
@@ -6,44 +6,44 @@ public class demo {
     // CARRERA 1
 
         Carrera c1 = new Carrera();
-        c1.setNombre("Cocina Criolla");
-        c1.setCuatrimestresTotales(6);
+            c1.setNombre("Cocina Criolla");
+            c1.setCuatrimestresTotales(6);
 
-        Materia m1 = new Materia();
-        m1.setCodigo("0001");
-        m1.setNombre("introduccion a la torta frita I");
-        m1.setCuatrimestre(1);
-        m1.setTipo("obligatoria");
+            Materia m1 = new Materia();
+            m1.setCodigo("0001");
+            m1.setNombre("introduccion a la torta frita I");
+            m1.setCuatrimestre(1);
+            m1.setTipo("obligatoria");
 
-        Materia m2 = new Materia();
-        m2.setCodigo("0002");
-        m2.setNombre("Estructurado y coccion de carnes");
-        m2.setCuatrimestre(1);
-        m2.setTipo("obligatoria");
+            Materia m2 = new Materia();
+            m2.setCodigo("0002");
+            m2.setNombre("Estructurado y coccion de carnes");
+            m2.setCuatrimestre(1);
+            m2.setTipo("obligatoria");
 
-        Materia m3 = new Materia();
-        m3.setCodigo("0003");
-        m3.setNombre("introduccion a la torta frita II");
-        m3.setCuatrimestre(2);
-        m3.setTipo("obligatoria");
+            Materia m3 = new Materia();
+            m3.setCodigo("0003");
+            m3.setNombre("introduccion a la torta frita II");
+            m3.setCuatrimestre(2);
+            m3.setTipo("obligatoria");
 
-        Materia m4 = new Materia();
-        m4.setCodigo("0004");
-        m4.setNombre("Preparación de salsas y condimentos");
-        m4.setCuatrimestre(2);
-        m4.setTipo("obligatoria");
+            Materia m4 = new Materia();
+            m4.setCodigo("0004");
+            m4.setNombre("Preparación de salsas y condimentos");
+            m4.setCuatrimestre(2);
+            m4.setTipo("obligatoria");
 
-        Materia m5 = new Materia();
-        m5.setCodigo("0005");
-        m5.setNombre("Pastelería avanzada");
-        m5.setCuatrimestre(3);
-        m5.setTipo("obligatoria");
+            Materia m5 = new Materia();
+            m5.setCodigo("0005");
+            m5.setNombre("Pastelería avanzada");
+            m5.setCuatrimestre(3);
+            m5.setTipo("obligatoria");
 
-        Materia m6 = new Materia();
-        m6.setCodigo("0006");
-        m6.setNombre("Gastronomía internacional");
-        m6.setCuatrimestre(3);
-        m6.setTipo("obligatoria");
+            Materia m6 = new Materia();
+            m6.setCodigo("0006");
+            m6.setNombre("Gastronomía internacional");
+            m6.setCuatrimestre(3);
+            m6.setTipo("obligatoria");
 
         GU.agregarMateria(c1, m1);
         GU.agregarMateria(c1, m2);

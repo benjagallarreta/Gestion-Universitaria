@@ -7,7 +7,7 @@ public class Alumno {
     static ArrayList<MateriaCursada> historiaAcademica;
 
     public Alumno() {
-        
+
     }
 
     public void setDNI(int DNI) {

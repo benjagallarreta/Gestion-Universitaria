@@ -1,11 +1,11 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Carrera {
     
     private String nombre;
     private int cuatrimestresTotales;
-    private LinkedList<Materia> materiasContenidas;
-    private static LinkedList<Alumno> alumnosInscriptos;
+    private static ArrayList<Materia> materiasContenidas;
+    private static ArrayList<Alumno> alumnosInscriptos;
 
     public Carrera() {
 
@@ -28,10 +28,20 @@ public class Carrera {
     }
 
    public void addMaterias(Materia materia) {
-        this.materiasContenidas.add(materia);
+        materiasContenidas.add(materia);
    }
 
    public static void addAlumno(Alumno alumno) {
         alumnosInscriptos.add(alumno);
    }
+
+   public static String getMaterias() {
+    StringBuilder nombres = new StringBuilder();
+    for (Materia materia : materiasContenidas) {
+        nombres.append(materia.getNombre()).append("\n");
+    }
+    return nombres.toString();
+}
+
+
 }
