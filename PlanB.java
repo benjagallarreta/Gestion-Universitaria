@@ -2,30 +2,30 @@
 public class PlanB implements StrategyPlanEstudio {
 
     @Override
-    public boolean verificarCondicion (MateriaCursada materia, Alumno alumno) {
+    public boolean verificarCondicion (Materia materia, Alumno alumno) {
 
         //acceder a las materias correlativas de la materia pasada como parametro
         //recorrer la lista de las materias correlativas
         //verificar si esas materias correlativas tiene como estado "aprobado"
         //inscribir alumno en caso de que esto suceda
         
-        for (Materia correlativa : materia.correlativas) {
-            boolean aprobada = false;
+        for (Materia correlativa : materia.getCorrelativas()) {
+            boolean estaAprobada = false;
     
-            for (MateriaCursada cursada : materiasCursadas) {
-                if (cursada.getMateria().equals(correlativa) &&
-                    cursada.getEstado() == MateriaCursada.Estado.aprobado) {
-                    aprobada = true;
+            for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
+                if (cursada.getMateriaCursada().getNombre().equals(correlativa.getNombre()) && 
+                cursada.getEstado() == MateriaCursada.Estado.aprobado) {
+                    estaAprobada = true;
                     break;
                 }
             }
     
-            if (!aprobada) {
-                return false; // una no aprobada, salimos
+            if (!estaAprobada) {
+                return false;
             }
         }
     
-        return true; // todas aprobadas
+        return true;
     }
 
 }

@@ -46,4 +46,7 @@ public class Materia {
         this.correlativas.add(materia);
     }
     
+    public ArrayList<Materia> getCorrelativas() {
+        return correlativas;
+    }
 }

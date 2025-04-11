@@ -35,6 +35,8 @@ public class Carrera {
         alumnosInscriptos.add(alumno);
    }
 
+
+   // este metodo esta medio al pedo no lo necesito creo 
    public static String getMaterias() {
     StringBuilder nombres = new StringBuilder();
     for (Materia materia : materiasContenidas) {

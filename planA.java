@@ -1,6 +1,4 @@
-// Plan A - Aprobó las cursadas de las correlativas
-
-import java.util.ArrayList;
+// Plan A - Aprobó todas las cursadas de las correlativas
 
 public class planA implements StrategyPlanEstudio {
 
@@ -13,22 +11,24 @@ public class planA implements StrategyPlanEstudio {
         // determino si el estado de la historia academica esta aprobada
         // en funcion de eso inscribo o no
 
-        private boolean aprobada = false;
-
-        for (Materia correlativas : meteria.getCorrelativas()) {
-            for ( : ) {
-                aprobada = true;
+        for (Materia correlativa : materia.getCorrelativas()) {
+            boolean estaRegular = false;
+    
+            for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
+                if (
+                    cursada.getMateriaCursada().getNombre().equals(correlativa.getNombre()) &&
+                    cursada.getEstado() == MateriaCursada.Estado.regular
+                ) {
+                    estaRegular = true;
+                    break;
+                }
+            }
+    
+            if (!estaRegular) {
+                return false;
             }
         }
-
-        
-        if (aprobada = true) {
-            return (true); 
-        }
-        else {
-            return(false);
-        }
-        
-    } 
-
+    
+        return true;
+    }
 }
