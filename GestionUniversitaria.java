@@ -49,7 +49,9 @@ public class GestionUniversitaria {
     }
 
     public void inscribirMateria(Materia materia, Alumno alumno) {
-        strategy.verificarCondicion(materia,alumno);
+        if (strategy.verificarCondicion(materia,alumno)) {
+            materia.inscribirAlumno(alumno);
+        };
     }
-
+    
 }

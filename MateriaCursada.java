@@ -1,4 +1,4 @@
-public class MateriaCursada extends Materia {
+public class MateriaCursada {
 
     private Materia materia;
     private Estado estado;
@@ -23,11 +23,12 @@ public class MateriaCursada extends Materia {
 
     @Override
     public String toString() {
-        return super.getNombre() + " - " + estado;
+        return materia.getNombre() + " - " + estado;
     }
 
-    public MateriaCursada(Materia materia) {
+    public MateriaCursada(Materia materia, Estado estado) {
         this.materia = materia;
+        this.estado = estado;
     }
 
     public void setEstado(Estado estado) {
@@ -38,7 +39,11 @@ public class MateriaCursada extends Materia {
         return estado;
     }
 
+    public String getNombre() {
+        return materia.getNombre();
+    }
+
     public MateriaCursada getMateriaCursada() {
-        return materia;
+        return this;
     }
 }

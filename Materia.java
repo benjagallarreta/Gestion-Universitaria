@@ -5,6 +5,7 @@ public class Materia {
     private String codigo,nombre,tipo;
     private int cuatrimestre;
     public ArrayList<Materia> correlativas;
+    public ArrayList<Alumno> alumnos_inscriptos;
 
     public Materia() {
         
@@ -48,5 +49,13 @@ public class Materia {
     
     public ArrayList<Materia> getCorrelativas() {
         return correlativas;
+    }
+
+    public void inscribirAlumno(Alumno alumno) {
+        alumnos_inscriptos.add(alumno);
+    }
+
+    public ArrayList<Alumno> getAlumnosInscriptos() {
+        return alumnos_inscriptos;
     }
 }
