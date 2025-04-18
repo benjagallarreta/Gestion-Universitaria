@@ -13,7 +13,7 @@ public class PlanB implements StrategyPlanEstudio {
             boolean estaAprobada = false;
     
             for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
-                if (cursada.getMateriaCursada().getNombre().equals(correlativa.getNombre()) && 
+                if (cursada.getNombre().equals(correlativa.getNombre()) && 
                 cursada.getEstado() == MateriaCursada.Estado.aprobado) {
                     estaAprobada = true;
                     break;

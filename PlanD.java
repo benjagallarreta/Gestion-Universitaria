@@ -1,6 +1,6 @@
-// Plan C: aprobó las cursadas de las correlativas y los finales de todas las materias de 5 cuatrimestres previos al que se quiere anotar
-public class PlanC implements StrategyPlanEstudio{
-
+//Plan D: aprobó las cursadas de las correlativas y los finales de todas las materias de 3 cuatrimestres previos al que se quiere anotar.
+public class PlanD implements StrategyPlanEstudio {
+    
     @Override
     public boolean verificarCondicion (Materia materia, Alumno alumno) {
 
@@ -10,7 +10,7 @@ public class PlanC implements StrategyPlanEstudio{
             for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
                 if (cursada.getNombre().equals(correlativa.getNombre()) 
                     && (cursada.getEstado() == MateriaCursada.Estado.aprobado 
-                        && correlativa.getCuatrimestre() < 5)) {
+                        && correlativa.getCuatrimestre() < 3)) {
                         estaAprobada = true;
                         break;
                 }
@@ -24,5 +24,5 @@ public class PlanC implements StrategyPlanEstudio{
         return true;
 
     }
-    
+
 }

@@ -16,7 +16,7 @@ public class planA implements StrategyPlanEstudio {
     
             for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
                 if (
-                    cursada.getMateriaCursada().getNombre().equals(correlativa.getNombre()) &&
+                    cursada.getNombre().equals(correlativa.getNombre()) &&
                     cursada.getEstado() == MateriaCursada.Estado.regular
                 ) {
                     estaRegular = true;
