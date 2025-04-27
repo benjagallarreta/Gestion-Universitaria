@@ -43,6 +43,10 @@ public class MateriaCursada {
         return materia.getNombre();
     }
 
+    public Materia getMateria() {
+        return this.materia;
+    }
+
     public MateriaCursada getMateriaCursada() {
         return this;
     }

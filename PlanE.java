@@ -10,7 +10,7 @@ public class PlanE implements StrategyPlanEstudio {
             for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
                 if (cursada.getNombre().equals(correlativa.getNombre())
                         && cursada.getEstado() == MateriaCursada.Estado.aprobado
-                        && cursada.getCuatrimestre() <= materia.getCuatrimestre() - 3) {
+                        && cursada.getMateria().getCuatrimestre() <= materia.getCuatrimestre() - 3) {
                     estaAprobada = true;
                     break;
                 }
@@ -23,7 +23,7 @@ public class PlanE implements StrategyPlanEstudio {
 
         // Verifica finales de todas las materias de los 3 cuatrimestres previos
         for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
-            if (cursada.getCuatrimestre() <= materia.getCuatrimestre() - 3) {
+            if (cursada.getMateria().getCuatrimestre() <= materia.getCuatrimestre() - 3) {
                 if (cursada.getEstado() != MateriaCursada.Estado.aprobado) {
                     return false;
                 }

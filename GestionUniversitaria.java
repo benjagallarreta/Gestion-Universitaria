@@ -54,4 +54,13 @@ public class GestionUniversitaria {
         };
     }
     
+    public Boolean verficarFinalizacion(Alumno alumno) {
+        for (MateriaCursada cursada : alumno.getHistoriaAcademica()) {
+            if (cursada.getEstado() != MateriaCursada.Estado.aprobado) {
+                return false; // Hay al menos una no aprobada
+            }
+        }
+        return true; // Todas están aprobadas
+    }
+    
 }

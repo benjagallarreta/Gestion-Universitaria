@@ -24,7 +24,7 @@ public class VistaGestionAcademica extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         
         // Create buttons
-        button1 = createButton("Button 1", "Action 1");
+        button1 = createButton("Verificar A", "Action 1");
         button2 = createButton("Button 2", "Action 2");
         button3 = createButton("Button 3", "Action 3");
         button4 = createButton("Button 4", "Action 4");
